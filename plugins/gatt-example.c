@@ -124,7 +124,7 @@ static gboolean register_battery_service(struct btd_adapter *adapter)
 			GATT_OPT_INVALID);
 }
 
-static void register_termometer_service(struct gatt_example_adapter *adapter,
+static void register_thermometer_service(struct gatt_example_adapter *adapter,
 			const uint16_t manuf1[2], const uint16_t manuf2[2])
 {
 	const char *desc_out_temp = "Outside Temperature";
@@ -533,7 +533,7 @@ static int gatt_example_adapter_probe(struct btd_adapter *adapter)
 
 	register_manuf1_service(gadapter, manuf1_range);
 	register_manuf2_service(gadapter, manuf2_range);
-	register_termometer_service(gadapter, manuf1_range, manuf2_range);
+	register_thermometer_service(gadapter, manuf1_range, manuf2_range);
 	register_vendor_service(gadapter, vendor_range);
 	register_weight_service(gadapter, vendor_range);
 
